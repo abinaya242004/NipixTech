@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nipix Technology</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar Section -->
+      <div class="sidebar">
+        <div class="company-logo">
+          <img src="nipixlogo.png" alt="Nipix Technology Logo" />
+        </div>
+        <h1>NIPIX TECH</h1>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Achievements</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="schedule-call">
+          <a href="tel:34567890">34567890</a>
+        </div>
+      </div>
+
+      <!-- Main Content Section -->
+      <div class="main-content">
+        <div class="team-image">
+          <div class="company-info">
+            <h1 class="company-name">Nipix Technology</h1>
+            <p class="company-quote">"Innovating the future with technology"</p>
+          </div>
+        </div>
+
+        <!-- Mission Section -->
+        <div class="mission-section">
+          <div class="mission-header">
+            <h1>Our Mission</h1>
+          </div>
+          <div class="mission-content">
+            <div class="mission-item">
+              <img src="telescope-outline.svg" alt="Mission Icon" />
+
+              <h2>Vision</h2>
+              <p>
+                To revolutionize the way we live and work by leveraging
+                cutting-edge technology and fostering positive change.
+              </p>
+            </div>
+            <div class="mission-item">
+              <img src="bulb-outline.svg" alt="Mission Icon" />
+              <h2>Mission</h2>
+              <p>
+                To solve real-world problems through innovative technology,
+                transforming industries and improving lives.
+              </p>
+            </div>
+            <div class="mission-item">
+              <img src="locate-outline.svg" alt="Goals Icon" />
+              <h2>Goals</h2>
+              <p>
+                To deliver transformative solutions by pushing the boundaries of
+                innovation and collaboration.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Achievements Section -->
+        <div class="achievements-section">
+          <div class="achievements-header">
+            <h1>Our Achievements</h1>
+          </div>
+          <div class="slider-container">
+            <div class="slider">
+              <img src="Screenshot (21).png" alt="Achievement 1" />
+              <img src="Screenshot (21).png" alt="Achievement 2" />
+              <img src="Screenshot (21).png" alt="Achievement 3" />
+              <img src="Screenshot (21).png" alt="Achievement 4" />
+              <img src="Screenshot (21).png" alt="Achievement 5" />
+              <img src="Screenshot (21).png" alt="Achievement 6" />
+              <img src="Screenshot (21).png" alt="Achievement 7" />
+              <img src="Screenshot (21).png" alt="Achievement 8" />
+              <img src="Screenshot (21).png" alt="Achievement 9" />
+              <img src="Screenshot (21).png" alt="Achievement 10" />
+            </div>
+          </div>
+        </div>
+        <script>
+          let currentIndex = 0;
+          const images = document.querySelectorAll(".slider img");
+          const totalImages = images.length;
+          let isTransitioning = false; // Flag to check if transition is in progress
+
+          function slide() {
+            if (isTransitioning) return; // Skip if a transition is in progress
+
+            // Check if we've reached the last image
+            if (currentIndex >= totalImages - 1) {
+              isTransitioning = true;
+              // Add a small delay before looping back to the first image
+              setTimeout(() => {
+                currentIndex = 0;
+                const offset = -currentIndex * 100;
+                document.querySelector(".slider").style.transition = "none"; // Disable transition
+                document.querySelector(
+                  ".slider"
+                ).style.transform = `translateX(${offset}%)`;
+
+                // Re-enable transition after setting to first image
+                setTimeout(() => {
+                  document.querySelector(".slider").style.transition =
+                    "transform 0.5s ease-in-out";
+                  isTransitioning = false;
+                }, 100); // Delay before enabling transition
+              }, 500); // Small delay before looping back to the first image
+            } else {
+              currentIndex++;
+              const offset = -currentIndex * 100;
+              document.querySelector(
+                ".slider"
+              ).style.transform = `translateX(${offset}%)`;
+            }
+          }
+
+          // Run the slide function every 2 seconds
+          setInterval(slide, 2500); // 2000ms = 2 seconds
+        </script>
+        <div class="form-container">
+          <h1>Your Dedicated Nipix Tech Team</h1>
+          <form>
+            <label for="first-name">First Name *</label>
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              placeholder="First name"
+              required
+            />
+
+            <label for="last-name">Last Name *</label>
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              placeholder="Last name"
+              required
+            />
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="india">India (+91)</option>
+              <option value="us">United States (+1)</option>
+              <option value="uk">United Kingdom (+44)</option>
+            </select>
+
+            <label for="email">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Your message"
+            ></textarea>
+
+            <button type="submit">Submit</button>
+          </form>
+          <p class="privacy-policy">
+            By providing us with your information, you are consenting to the
+            collection and use of your information in accordance with our
+            <a href="#">Privacy Policy</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

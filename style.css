@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #f4f4f4;
+  width: 15%;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.sidebar h1 {
+  color: #ff6f00;
+  font-size: 1.5em;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.schedule-call {
+  margin-top: 20px;
+}
+
+.schedule-call a {
+  display: inline-block;
+  background-color: #ff6f00;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+/* *********** */
+/* company name */
+.company-info {
+  width: 50%;
+  text-align: center;
+}
+
+.company-logo img {
+  max-width: 190px; /* Adjust logo size */
+  margin-bottom: 20px;
+}
+
+.company-name {
+  font-size: 7rem; /* Large, bold company name */
+  font-weight: bold;
+  color: #ff6f00; /* Brand color */
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.company-quote {
+  font-size: 1.2rem; /* Smaller font size for the quote */
+  font-style: italic;
+  color: #fff; /* Light text color */
+}
+/* ************ */
+/* Main Content */
+.main-content {
+  width: 85%;
+  padding: 20px;
+  background-color: #003366;
+  color: #fff;
+}
+
+.form-container {
+  background-color: #023e8a;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form */
+.form-container h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-container form label {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea,
+.form-container button {
+  font-size: 1rem;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.form-container button {
+  background-color: #ff6f00;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #e65c00;
+}
+
+.privacy-policy {
+  font-size: 0.8rem;
+  color: #ccc;
+  text-align: center;
+}
+
+.privacy-policy a {
+  color: #ff6f00;
+  text-decoration: none;
+}
+/* ************* */
+/* Mission Section */
+/* *********** */
+.mission-section {
+  /* background-color: #f4f4f4; */
+  padding: 40px 20px;
+  border-radius: 8px;
+  margin-top: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mission-header h1 {
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+.mission-content {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  /* box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.4s; */
+}
+.mission-item:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 1rem 3rem #234193;
+}
+
+.mission-item {
+  background-color: #ffffff;
+  flex: 1;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  /* box-shadow: 0 2px 4px rgba(214, 205, 205, 0.1); */
+
+  /* box-shadow: 0 2.4rem 4.8rem rgba(228, 223, 223, 0.075); */
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.mission-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.mission-item h2 {
+  font-size: 1.5rem;
+  color: #ff6f00;
+  margin-bottom: 10px;
+}
+
+.mission-item p {
+  font-size: 1rem;
+  color: #555;
+}
+/* ********** */
+/* Achievements section */
+/* ************* */
+
+/* .achievements-section {
+  background-color: #fff;
+  padding: 40px 20px;
+  margin-top: 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+.achievements-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.achievements-header h1 {
+  font-size: 2.5rem;
+  color: #ff6f00;
+}
+
+.slider-container {
+  overflow: hidden;
+  position: relative;
+  width: 60%;
+  height: 25rem;
+  max-width: 100%;
+  margin: 0 auto;
+  flex: 0 0 100%;
+  border-radius: 15px;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  flex: 0 0 100%; /* Each image takes 100% width, only one is shown at a time */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
